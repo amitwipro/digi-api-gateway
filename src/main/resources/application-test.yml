@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      routes:
+        - id: retail-account
+          uri: http://localhost:8002/
+          predicates:
+            - Path=/digi/retailbank/v1/account/**
+          filters:
+            - name: Hystrix
+              args:
+                name: retail-account
+                fallbackUri: forward:/fallback/accountFallback
+
