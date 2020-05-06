@@ -1,6 +1,4 @@
 spring:
-  profiles:
-
   cloud:
     gateway:
       routes:
@@ -17,4 +15,3 @@ spring:
             - name: AccountPostFilter
       default-filters:
         - name: DigiGlobalFilter
-
