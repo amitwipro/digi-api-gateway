@@ -5,4 +5,4 @@ spring:
   application:
     name: ApiGateway
   profiles:
-    active: dev
+    active: test
