@@ -21,7 +21,7 @@ public class DigiGlobalFilter extends AbstractGatewayFilterFactory<DigiGlobalFil
 
         log.info("Inside Digi Global Filter");
         return (exchange, chain) -> {
-            log.info("Intercept request and set header...");
+            log.info("In Digi global filter...");
             ServerHttpRequest request = exchange.getRequest().mutate()
                     .header("access-token", "any access token").build();
             return chain.filter(exchange.mutate().request(request).build());

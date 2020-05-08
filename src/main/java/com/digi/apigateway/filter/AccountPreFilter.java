@@ -21,7 +21,6 @@ public class AccountPreFilter extends AbstractGatewayFilterFactory<AccountPreFil
 
         log.info("Inside Account Pre Filter");
         return (exchange, chain) -> {
-
             log.info("Intercepted request to account");
             ServerHttpRequest request = exchange.getRequest().mutate()
                     .header("account", "Intercepted account").build();
