@@ -22,7 +22,7 @@ public class RouteConfiguration {
 
         return builder.routes()
                 .route(p -> p
-                        .path("/digi/retailbank/v1/account/**")
+                        .path("/digi/retailbank/v1/**")
                         .filters(f -> f.hystrix(config -> config
                                 .setName("retail-account")
                                 .setFallbackUri("forward:/fallback/accountFallback"))
