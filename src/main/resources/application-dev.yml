@@ -1,6 +1,0 @@
-spring:
-  cloud:
-    gateway:
-      default-filters:
-        -
-          name: DigiGlobalFilter

@@ -13,5 +13,3 @@ spring:
                 fallbackUri: forward:/fallback/accountFallback
             - name: AccountPreFilter
             - name: AccountPostFilter
-      default-filters:
-        - name: DigiGlobalFilter
