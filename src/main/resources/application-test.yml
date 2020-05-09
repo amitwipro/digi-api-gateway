@@ -3,7 +3,7 @@ spring:
     gateway:
       routes:
         - id: retail-account
-          uri: http://localhost:8002/
+          uri: lb://RETAIL-BANKING
           predicates:
             - Path=/digi/retailbank/v1/**
           filters:

@@ -28,7 +28,7 @@ public class RouteConfiguration {
                         })
                                 .filter(new AccountPreFilter().apply(new AccountPreFilter.Config()), 0)
                                 .filter(new AccountPostFilter().apply(new AccountPostFilter.Config()), 1))
-                        .uri("http://localhost:8002/"))
+                        .uri("lb://RETAIL-BANKING"))
                 .build();
     }
 
