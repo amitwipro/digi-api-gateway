@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class FallBackController {
 
     @GetMapping("/accountFallback")
-    public ResponseEntity<String> orderServiceFallback(){
-        return new ResponseEntity<>("We are facing some issue with order. Please contact support", HttpStatus.INTERNAL_SERVER_ERROR);
+    public ResponseEntity<String> orderServiceFallback() {
+        return new ResponseEntity<>("We are facing some issue with order. Please contact support",
+                HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
